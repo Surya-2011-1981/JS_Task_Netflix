@@ -1,0 +1,156 @@
+/* Skeleton Loading Styles */
+
+.skeleton {
+    background-color: var(--background-lighter);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.skeleton::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Media Card Skeleton */
+.media-card-skeleton {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.skeleton-image {
+    aspect-ratio: 4 / 6;
+    background-color: var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.skeleton-content {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.skeleton-line {
+    height: 12px;
+    background-color: var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+.skeleton-line-full {
+    width: 100%;
+}
+
+.skeleton-line-short {
+    width: 60%;
+}
+
+.skeleton-line-long {
+    width: 80%;
+}
+
+/* Hero Skeleton */
+.hero-skeleton {
+    position: relative;
+    height: 500px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.skeleton-hero-image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--border-color);
+}
+
+.skeleton-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+.skeleton-hero-content {
+    position: absolute;
+    bottom: var(--spacing-xl);
+    left: var(--spacing-xl);
+    right: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.skeleton-hero-content .skeleton-line {
+    width: 50%;
+}
+
+.skeleton-hero-content .skeleton-line:first-child {
+    width: 80%;
+    height: 32px;
+}
+
+/* Row Skeleton */
+.row-skeleton {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.skeleton-row-title {
+    height: 28px;
+    width: 200px;
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.skeleton-row-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.skeleton-row-item {
+    aspect-ratio: 2 / 3;
+    background-color: var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+/* List Skeleton */
+.skeleton-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .skeleton-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .hero-skeleton {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skeleton-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .hero-skeleton {
+        height: 200px;
+    }
+}
